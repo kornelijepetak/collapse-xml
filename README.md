@@ -1,8 +1,8 @@
 
 ![Logo](http://kornelijepetak.com/collapse-logo.png)
 
-Generate XML from templates
+A .NET library for one of the best ways to generate XML files from data.
 
-For quick guide see "[Getting started with CollapseXML](http://blog.kaisean.com/collapsexml/)"
+For a quick tour, see ["Getting started with CollapseXML"](http://blog.kaisean.com/collapsexml/)
 
-If you need the complete documentation, read: [CollapseXML Documentation](http://blog.kaisean.com/collapsexml-documentation/).
+For an in-depth guide, see [CollapseXML Documentation](http://blog.kaisean.com/collapsexml-documentation/).
