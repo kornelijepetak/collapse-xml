@@ -1,7 +1,7 @@
 
 ![Logo](http://kornelijepetak.com/collapse-logo.png)
 
-A .NET library for one of the best ways to generate XML files from data.
+A new way to **generate XML** from your data in .NET.
 
 For a quick tour, see ["Getting started with CollapseXML"](http://blog.kaisean.com/collapsexml/)
 
