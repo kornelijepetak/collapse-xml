@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<template xmlns:cx="http://kaisean.com/tools/collapse">
+	<customers>
+		<customer cx:foreach="customer in Customers"
+				  name="cx|customer.Name"
+				  cx:filter-name="isValidName | customer" />
+	</customers>
+</template>

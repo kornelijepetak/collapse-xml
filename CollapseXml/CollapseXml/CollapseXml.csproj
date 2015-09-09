@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BBBF35E9-585C-4CE8-B906-36A9E0F5DE9F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Kaisean.Tools.CollapseXml</RootNamespace>
+    <AssemblyName>CollapseXml</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>bin\Release\CollapseXml.XML</DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Collapse\Collapse.Filters.cs" />
+    <Compile Include="Collapse\Collapse.Items.cs" />
+    <Compile Include="Collapse\Collapse.Construction.cs" />
+    <Compile Include="Collapse\Collapse.cs" />
+    <Compile Include="Collapse\Collapse.Formatting.cs" />
+    <Compile Include="Collapse\Collapse.Static.cs" />
+    <Compile Include="Errors\CollapseXmlException.cs" />
+    <Compile Include="Errors\DateTimeFormatInvalidException.cs" />
+    <Compile Include="Filter\FilterArgumentDefinition.cs" />
+    <Compile Include="Filter\CollapseFilterArgument.cs" />
+    <Compile Include="Filter\CollapseFilterArgumentCollection.cs" />
+    <Compile Include="Context\CollapseContext.cs" />
+    <Compile Include="Collapse\MissingFilterBehavior.cs" />
+    <Compile Include="Errors\FilterNotFoundException.cs" />
+    <Compile Include="Errors\InvalidFilterDefinitionException.cs" />
+    <Compile Include="Errors\InvalidItemPathException.cs" />
+    <Compile Include="Errors\MissingPathException.cs" />
+    <Compile Include="Errors\MissingSourceAttributeOnValueElementException.cs" />
+    <Compile Include="Errors\ObjectNotACollectionException.cs" />
+    <Compile Include="Errors\InvalidCollectionPathException.cs" />
+    <Compile Include="Errors\VariableAlreadyDefinedException.cs" />
+    <Compile Include="Errors\InvalidForeachPathException.cs" />
+    <Compile Include="Errors\MissingNamespaceException.cs" />
+    <Compile Include="Errors\InvalidXmlFormatException.cs" />
+    <Compile Include="Errors\MultipleRootElementsException.cs" />
+    <Compile Include="Errors\RootElementIsAForeachException.cs" />
+    <Compile Include="Errors\RootElementNotFoundException.cs" />
+    <Compile Include="Filter\FilterDefinition.cs" />
+    <Compile Include="Filter\FilterFunction.cs" />
+    <Compile Include="Foreach\ForEachDefinition.cs" />
+    <Compile Include="Foreach\CollapseValueDefinition.cs" />
+    <Compile Include="Helpers\CollapseHelper.cs" />
+    <Compile Include="Properties\AssemblyInfo.Version.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Context\ScopeItem.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

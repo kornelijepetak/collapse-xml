@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<template xmlns:cx="http://kaisean.com/tools/collapse">
+	<customers>
+		<description cx:filter="hasCustomers | Customers">Customers</description>
+		<customer cx:foreach="customer in Customers"
+				  cx:filter="isCustomerValid | customer.Name, customer.Orders.Count"
+				  name="cx|customer.Name">
+			<text>Dear <cx:value source="customer.Name" />, we are informing you that you have been selected.</text>
+			<order cx:foreach="order in customer.Orders"
+				   date="cx|order.Timestamp">
+				<text>Another way of saying that this order should be modified with the valid date of (cx|order.Timestamp)</text>
+				<Item cx:foreach="item in order.Items"
+					  amount="cx|item.Amount"
+					  name="cx|item.Article.Name"
+					  unit="cx|item.Article.Unit">
+					<text>(cx|customer.Name) ordered (cx|item.Amount)(cx|item.Article.Unit) of (cx|item.Article.Name).</text>
+				</Item>
+			</order>
+		</customer>
+	</customers>
+</template>

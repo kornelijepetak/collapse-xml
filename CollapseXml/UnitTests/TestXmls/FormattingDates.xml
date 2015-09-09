@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<template xmlns:cx="http://kaisean.com/tools/collapse">
+	<orders>
+		<order cx:foreach="order in Orders"
+			   time="cx|order.Timestamp">(cx|order.Timestamp)</order>
+		<valOrder cx:foreach="order in Orders"><cx:value source="order.Timestamp" /></valOrder>
+	</orders>
+</template>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<template xmlns:cx="http://kaisean.com/tools/collapse">
+	<customers>
+		<customer cx:foreach="customer in Customers">
+      <dates>
+        <date cx:foreach="date in customer.RelevantDates"
+              date="cx|date" />
+      </dates>
+		</customer>
+	</customers>
+</template>

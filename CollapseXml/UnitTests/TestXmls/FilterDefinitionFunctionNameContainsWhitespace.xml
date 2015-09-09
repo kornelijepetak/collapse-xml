@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<template xmlns:cx="http://kaisean.com/tools/collapse">
+	<customers>
+    <customer cx:foreach="c in Customers"
+              cx:filter="filter name|arg" />
+	</customers>
+</template>
